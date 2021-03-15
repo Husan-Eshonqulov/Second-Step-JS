@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worldwide Holidays 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mukta:wght@700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martel:wght@700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap">
+</head>
+
+<body>
+    <h2><pre>Worldwide   Holidays</pre></h2>
+    <form>
+        <div class="input">
+            <label for="country">Country: </label>
+            <input type="text" id="country" name="country" list="countries" placeholder="Enter any country    (uz - ``Uzbekistan``)" required>
+            <datalist id="countries">
+                <option value="af">Afghanistan</option>
+                <option value="ar">Argentina</option>
+                <option value="au">Australia</option>
+                <option value="at">Austria</option>
+                <option value="az">Azerbaijan</option>
+                <option value="bh">Bahrain</option>
+                <option value="bd">Bangladesh</option>
+                <option value="by">Belarus</option>
+                <option value="be">Belgium</option>
+                <option value="bo">Bolivia</option>
+                <option value="br">Brazil</option>
+                <option value="bg">Bulgaria</option>
+                <option value="bf">Burkina Faso</option>
+                <option value="cm">Cameroon</option>
+                <option value="ca">Canada</option>
+                <option value="cf">Central African Republic</option>
+                <option value="cl">Chile</option>
+                <option value="cn">China</option>
+                <option value="co">Colombia</option>
+                <option value="cr">Costa Rica</option>
+                <option value="ci">Cote d'Ivoire</option>
+                <option value="cu">Cuba</option>
+                <option value="cz">Czech Republic</option>
+                <option value="do">Dominican Republic</option>
+                <option value="ec">Ecuador</option>
+                <option value="eg">Egypt</option>
+                <option value="sv">El Salvador</option>
+                <option value="ee">Estonia</option>
+                <option value="et">Ethiopia</option>
+                <option value="fr">France</option>
+                <option value="de">Germany</option>
+                <option value="gh">Ghana</option>
+                <option value="gr">Greece</option>
+                <option value="gl">Greenland</option>
+                <option value="gt">Greenland</option>
+                <option value="hn">Honduras</option>
+                <option value="hu">Hungary</option>
+                <option value="in">India</option>
+                <option value="id">Indonesia</option>
+                <option value="ir">Iran</option>
+                <option value="iq">Iraq</option>
+                <option value="il">Israel</option>
+                <option value="it">Italy</option>
+                <option value="jm">Jamaica</option>
+                <option value="jp">Japan</option>
+                <option value="kz">Kazakhstan</option>
+                <option value="kw">Kazakhstan</option>
+                <option value="kg">Kyrgyzstan</option>
+                <option value="uz">Uzbekistan</option>
+                <option value="ru">Russia</option>
+                <option value="us">United States</option>
+            </datalist>
+        </div>
+
+        <div class="input">
+            <label for="year">Year: </label>
+            <input type="number" id="year" placeholder="Enter any year    (2021)" min="1992" required>
+        </div>
+
+        <div class="button">
+            <button id="submit">Submit</button>
+        </div>
+    </form>
+
+    <div id="output-div">
+
+    </div>
+
+    <script src="main.js"></script>
+    <script>
+        function clickListener(event){
+            const inputCountry = document.getElementById("country").value;
+            const inputYear = document.getElementById("year").value;
+            const submit = document.getElementById("submit");
+            const output = document.getElementById("output-div");
+            output.innerHTML = "";
+
+            const response = executeSearch(inputCountry, inputYear);
+            response.then(result => output.innerHTML = result);
+            event.preventDefault();
+        }
+        document.getElementById("submit").addEventListener("click", clickListener);
+    </script>
+</body>
+
+</html>
