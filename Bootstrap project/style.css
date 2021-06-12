@@ -1,66 +1,58 @@
 nav {
-    background-color: #181818;
+  background-color: #181818;
 }
-
 
 header {
-    background-color: #181818;
+  background-color: #181818;
 }
-
 
 #button-2 {
-    background-color: #181818;
-    color: #fff;
-    outline: 1px solid #fff;
+  background-color: #181818;
+  color: #fff;
+  outline: 1px solid #fff;
 }
-
 
 .box-sizing-border-box {
-    box-sizing: border-box;
-    /* width: 150px; */
+  box-sizing: border-box;
+  /* width: 150px; */
 }
-
 
 .banner {
-    background-color: rgba(24, 24, 24);
+  background-color: rgba(24, 24, 24);
 }
-
 
 .features {
-    background-color: #181818;
+  background-color: #181818;
 }
-
 
 .contents {
-    background-color: #181818;
+  background-color: #181818;
 }
-
 
 .height-500 {
-    height: 500px;
+  height: 500px;
 }
-
 
 .gallery {
-    background-color: #181818;
+  background-color: #181818;
 }
-
 
 #text-decoration-none {
-    text-decoration: none;
+  text-decoration: none;
 }
-
 
 .partners {
-    background-color: #181818;
+  background-color: #181818;
 }
-
 
 .testimonials {
-    background-color: #181818;
+  background-color: #181818;
 }
 
+.box-sizing-border {
+  box-sizing: border-box;
+}
 
 footer {
-    background-color: #181818;
+  background-color: #181818;
 }
